@@ -52,6 +52,10 @@ body {
     font-size: 18px;
 }
 
+.blogs {
+    padding: 100px;
+}
+
 .blogs a:active {
     color: black;
     text-decoration: none;
