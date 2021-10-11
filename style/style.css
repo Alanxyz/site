@@ -52,12 +52,13 @@ body {
     font-size: 18px;
 }
 
-.blogs a {
-    text-decoration: none;
+.blogs {
+    padding: 50px;
+    text-align: center;
 }
 
-.blogs {
-    padding: 100px;
+.blogs a {
+    text-decoration: none;
 }
 
 .blogs a:active {
