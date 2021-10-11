@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta content='ZSendokame Blog!' property='og:title'>
+    <meta content='Deteccion de OSes con TTL y Python!' property='og:description'>
+    <meta name=theme-color content='#c0ff00'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='author' content='ZSendokame'>
+    <meta name='keywords' content='Hacking y Tecnologia'>
+
+    <title>ZSendokame Blog</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <link href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap' rel='stylesheet'>
+    <script src='../code/script.js'></script>
+    <link rel='shortcut icon' href='https://cdn.discordapp.com/emojis/788992000908066816.png?size=80'>
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Deteccion de OSes con TTL y Python</h1>
+        <p>Python, TTL, Hacking</p>
+    </div>
+
+    <div class="content">
+        <h3>En mi primer blog estare hablando sobre el TTL y como reconocer sistemas operativos con el!</h3>
+
+        <p>Pero hay que saber lo que es el <strong>TTL</strong></p>
+        <br>
+        <p>El TTL es el numero de "Saltos" que puede dar un paquete dentro de una red hasta ser descartado</p>
+        <p>Este puede cambiar de OS en OS</p>
+        <br>
+        <p>Gran parte de los sistemas operativos tienen un TTL predefinido</p>
+        <p>Como podria ser Windows que siempre usa 128 (Hay algunas excepciones)</p>
+        <br>
+        <p>Aca dejo una tabla con los TTL de diferentes OSes</p>
+        <br>
+        <h4>Linux: 255/64</h4>
+        <h4>MacOS: 64</h4>
+        <h4>Windows: 128/32</h4>
+        <br>
+        <p>Ya sabiendo lo que es el TTL y el TTL que usan diferentes sistemas operativos podemos partir con el codigo</p>
+        <p>Haciendo un <code>ping 127.0.0.1</code> en nuestra terminal podremos ver el TTL que usamos</p>
+        <p>Sabiendo que el comando Ping puede darnos el TTL podemos hacer lo siguiente</p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/24ac0490dda843a8140665150ad451cf.js"></script>
+        <br>
+        <p>Primero importamos la libreria OS (No necesitas descargarla)</p>
+        <p>Esta nos permitira ejecutar comandos usando <code>os.popen()</code></p>
+        <p>Al final se le agrega un <code>.read()</code> para poder leer el output que da</p>
+        <p>Sabiendo el <strong>TTL</strong> de cada sistema operativo podemos hacer un if que busque cierto string</p>
+        <p><code>if 'TTL=128' in output:</code></p>
+        <p>En Windows el comando de ping te da este output</p>
+        <br>
+        <pre>
+        <code>Haciendo ping a 127.0.0.1 con 32 bytes de datos:</code>
+        <code>Respuesta desde 127.0.0.1: bytes=32 tiempo 1m TTL=128</code>
+        <code>Respuesta desde 127.0.0.1: bytes=32 tiempo 1m TTL=128</code>
+        <code>Respuesta desde 127.0.0.1: bytes=32 tiempo 1m TTL=128</code>
+        <code>Respuesta desde 127.0.0.1: bytes=32 tiempo 1m TTL=128</code>
+        </pre>
+        <br>
+        <p>Si lo notan al hacer un ping a un Windows nos saldra la frase <code>TTL=128</code> este es el string que estaremos buscando</p>
+        <p>Este string cambia dependiendo del TTL del sistema operativo al que le hagamos un ping</p>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h2>
+        <br>
+    </div>
+
+    <button onclick="up()" class="upbutton">Go Up</button>
+</body>
