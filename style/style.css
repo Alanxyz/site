@@ -51,3 +51,18 @@ body {
     border-radius: 500px;
     font-size: 18px;
 }
+
+.blogs a:active {
+    color: black;
+    text-decoration: none;
+}
+
+.blogs a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.blogs a:hover {
+    color: palevioletred;
+    text-decoration: none;
+}
