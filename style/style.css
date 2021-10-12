@@ -61,6 +61,7 @@ body {
 
 .blogs a {
     text-decoration: none;
+    color: black;
 }
 
 .blogs a:active {
