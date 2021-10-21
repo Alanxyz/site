@@ -19,9 +19,11 @@ body {
 code {
     color: black;
     background-color: #D6DBE0;
-    font-size: 15px;
     padding: 2px;
     font-family: 'Fira Code';
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
 }
 
 .upbutton {
