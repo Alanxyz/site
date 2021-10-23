@@ -6,6 +6,11 @@
     padding-bottom: 40px;
 }
 
+::selection {
+    color: white;
+    background: rgb(45, 45, 45);
+}
+
 a {
     text-decoration: none;
     color: black;
