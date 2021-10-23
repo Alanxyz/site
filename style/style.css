@@ -4,6 +4,11 @@ body {
     font-family: 'Fira Code', 'Verdana', 'monospace';
 }
 
+::selection {
+    color: white;
+    background: rgb(45, 45, 45);
+}
+
 .header {
     padding: 70px;
     text-align: center;
