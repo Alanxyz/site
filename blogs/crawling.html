@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="ZSendokame Blog!" property="og:title">
+    <meta content="Hacendo Arañas!" property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>ZSendokame Blog</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <script src="../code/script.js"></script>
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/emojis/788992000908066816.png?size=80">
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Home</a>
+    </div>
+
+    <div class="title">
+        <h1>Arañas Web</h1>
+        <p>Python, web</p>
+    </div>
+
+    <div class="content">
+        <h2>Hola gente</h2>
+        <p>Hoy estare haciendo una "araña" web que obtenga todos los links de una pagina</p>
+        <br>
+        <p>Pero primero... Que es una araña?</p>
+        <h3>Cuando hablamos de arañas no me refiero a esas cosas peludas de ocho patas que te pueden matar en cualquier momento</h3>
+        <h3>Si no que hablo de unos robots que se encargan de obtener el contenido de las paginas web</h3>
+        <h3>Normalmente esto lo hace Google, Duckduckgo y otros buscadores para que las webs aparezcan en sus buscadores</h3>
+        <br>
+        <p>Ahora que sabemos lo que es un "Crawler" o "Araña web" podemos seguir</p>
+        <p>Vamos a necesitar un par de librerias para hacer esto</p>
+        <p>Y son las siguientes <code>requests</code>, <code>bs4</code> y <code>lxml</code></p>
+        <p>Requests sera el encargado de hacer una peticion a la pagina y obtener el contenido</p>
+        <p>BS4 de parsear el codigo (Lo hara usando LXML)</p>
+        <p>Y se instalan con el comando <code>pip install requests, bs4, lxml</code></p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/e0a5f68ec11d0edefd099db76c0a84dc.js"></script>
+        <br>
+        <p>Lo que hace este codigo es crear una funcion con un parametro (<code>host</code>)</p>
+        <p>Crearemos una variable llamada <code>count</code> la cual se encargara de contar el numero de links en una web</p>
+        <p>Ahora crearemos una variable llamada <code>get</code> la cual se encargara de hacer la peticion (De tipo <code>get</code>)</p>
+        <p>Para poder parasear todo el contenido de la web creamos una variable llamada <code>soup</code> la cual parseara el contenido de la web usando <code>lxml</code></p>
+        <p>Si queremos encontrar links necesitaremos crear una variable llamada find la cual usando la funcion <code>find_all</code> encontrara todas las etiquetas <code>a</code> con el atributo <code>href</code></p>
+        <p>Para que filtramos todas las urls y buscamos las que tienen <code>href</code>?</p>
+        <p>Muchas veces las urls pueden dar errores si este atributo no se encuentra</p>
+        <p>Asi que para evitar errores usaremos este parametro</p>
+        <p>Ahora haremos un <code>for loop</code> usando <code>find</code> el cual devuelve un array con todas las etiquetas <code>a</code> que tengan el atributo <code>href</code></p>
+        <p>Por cada link contaremos uno</p>
+        <p>Y finalmente imprimiremos el link</p>
+        <p>esta accion se repetira con todos</p>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h2>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Go Up</button>
+</body>
