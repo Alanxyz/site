@@ -17,8 +17,9 @@ body {
 }
 
 .content {
-    text-align: center;
-    font-size: 14px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 code {
