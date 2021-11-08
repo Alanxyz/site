@@ -50,23 +50,20 @@ code {
 
 .header {
     padding: 10px;
+    position: fixed;
 }
 
-.header a {
+a {
     color: black;
     text-decoration: none;
 }
 
-.header a:visited {
+a:visited {
     color: black;
     text-decoration: none;
 }
 
-.header a:hover {
+a:hover {
     color: palevioletred;
     text-decoration: none;
-}
-
-.header {
-    position: fixed;
 }
