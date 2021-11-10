@@ -40,12 +40,16 @@ code {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: rgb(32, 192, 190);
+    background-color: rgb(64, 67, 67);
     color: white;
     cursor: pointer;
     padding: 15px;
-    border-radius: 500px;
+    border-radius: 100px;
     font-size: 18px;
+}
+
+.upbutton:hover {
+    background-color: rgb(41, 43, 43);
 }
 
 .header {
