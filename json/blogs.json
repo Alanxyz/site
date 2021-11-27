@@ -1,0 +1,11 @@
+{
+    "blogs": [
+        { "title": "Arañas, internet y Python.", "link": "/blogs/crawling.html" },
+        { "title": "Que es la Deep Web y como hacer tu pagina parte de ella.", "link": "/blogs/deep_web.html" },
+        { "title": "Ocultando y revelando mensajes con Esteganografia!.", "link": "/blogs/steganography.html" },
+        { "title": "Web Scraping basico!.", "link": "/blogs/web_scrape.html" },
+        { "title": "Parseando y obteniendo Posts de paginas web.", "link": "/blogs/parse_rss.html" },
+        { "title": "Obteniendo datos de servidores con GET.", "link": "/blogs/get_data_h.html" },
+        { "title": "Deteccion de OSes usando Ping.", "link": "/blogs/os_detection.html" }
+    ]
+}
