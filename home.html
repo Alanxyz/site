@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta content="ZSendokame Blog!" property="og:title">
-    <meta content="Blog sobre Hacking! | En Mantenimiento" property="og:description">
+    <meta content="Blog sobre Hacking!" property="og:description">
     <meta name=theme-color content="#c0ff00">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="ZSendokame">
     <meta name="keywords" content="Hacking y Tecnologia">
 
-    <title>ZSendokame Blog | En Mantenimiento</title>
+    <title>ZSendokame Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <script src="code/script.js"></script>
-</head> 
+    <script type="module" src="code/home.js"></script>
+</head>
 <body>
     <div class="header">
         <h1>El Blog de Sendokame</h1>
@@ -26,14 +27,8 @@
         <a href="https://discord.gg/aBsCR6pyZj" title="Servidor de Discord">Discord</a>
     </div>
 
-    <div class="blogs">
-        <a href="./blogs/deep_web.html">Que es la Deep Web?.</a>
-        <a href="./blogs/web_scrape.html">Web Scrapping en Python.</a>
-        <a href="./blogs/crawling.html">Obteniendo todos los links de una web usando Python.</a>
-        <a href="./blogs/os_detection.html">Detectando OSes con TTL.</a>
-        <a href="./blogs/get_data_h.html">Obteniendo datos de servidores.</a>
-        <a href="./blogs/parse_rss.html">Parseando XML y obteniendo Posts.</a>
-        <a href="./blogs/steganography.html">Esteganografia con Python.</a>
+    <div class="blogs" id="blogs">
+
     </div>
 
     <noscript>
