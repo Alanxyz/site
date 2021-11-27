@@ -62,8 +62,8 @@ body {
 }
 
 .blogs {
-    padding: 50px;
-    text-align: left;
+    position: absolute;
+    left: 100px;
     font-family: 'Fira Code';
     white-space: pre-wrap;
 }
