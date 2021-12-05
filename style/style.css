@@ -3,6 +3,8 @@
 body {
     font-family: 'Fira Code', 'Verdana', 'monospace';
     cursor: default;
+    margin: 0px;
+    padding: 0px;
 }
 
 ::selection {
@@ -11,6 +13,9 @@ body {
 }
 
 .header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     padding: 70px;
     text-align: center;
     background-color: #65B0BB;
