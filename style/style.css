@@ -1,6 +1,9 @@
-body {
+@font-face {
     font-family: 'Fira Code';
     src: url('../fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
     font-weight: bolder;
     cursor: default;
     margin: 0px;
