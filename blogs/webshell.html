@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="ZSendokame Blog!" property="og:title">
+    <meta content="Que es y como se hacen las Web Shell" property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>ZSendokame Blog</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <script src="../code/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Home</a>
+    </div>
+
+    <div class="title">
+        <h1>Que son las Web Shells y como funcionan</h1>
+        <p>Python, web, hacking</p>
+    </div>
+
+    <div class="content">
+        <p>Hola gente</p>
+        <p>Hoy estare hablando sobre "Web Shells"</p>
+        <p>Que son y como se hacen</p>
+        <p>Primero... que es una Web Shell?</p>
+        <br>
+        <h3>Una Web Shell es un script (En cualquier lenguaje) que puede ser subido a un servidor web y recibira comandos que despues ejecutara</h3>
+        <br>
+        <p>Normalmente estas Web Shells se crean en lenguajes para web (Como <code>PHP</code>)</p>
+        <p>Y ejecutan comandos usando los valores de los parametros de una URL</p>
+        <p>Los parametros se inician usando <code>?</code> y para definir sus valores se usa <code>=</code></p>
+        <p>cabe aclarar que estos valores no pueden estar todos juntos, se separan usando <code>&</code></p>
+        <p>Algo como esto: <code>http://example.com/path?primerParametro=1&segundoParametro=2</code></p>
+        <p>Ahora que sabemos lo basico, podemos comenzar con el codigo</p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/ce2b65c638797d329d21d2fde5b88f62.js"></script>
+        <br>
+        <p>En primer lugar importamos la libreria <code>Flask</code> y sus funciones <code>Flask</code> y <code>request</code> (Se instala con <code>pip install flask</code>)</code></p>
+        <p>E importamos <code>os</code> (No se necesita instalar)</p>
+        <p>Esta libreria sera la encargada de ejecutar los comandos</p>
+        <p>Ahora definimos <code>app</code> que sera un objeto con el cual podemos correr y manipular las opciones de este script</p>
+        <p>Para crear una ruta usaremos <code>@app.route()</code>, que es una funcion en donde le pasaremos un parametro</p>
+        <p>En este caso la ruta que queramos crear (<code>/shell</code>)</p>
+        <p>Ya con la ruta creada hacemos una funcion <code>shell</code> que definira <code>command</code> en donde se parsearan los parametros y se obtendra el parametro <code>shell</code></p>
+        <p>Para ahora redefinir <code>command</code> a <code>os.popen</code> que es la funcion que ejecutara el comando</p>
+        <p>Despues de ejecutar el comando se retornara el output reemplazando los saltos de linea por <code>&#60;br&#62;</code></p>
+        <p>Y finalmente se correra la App con la funcion <code>.run()</code> del objeto <code>app</code> que definimos al inicio</p>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h2>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Go Up</button>
+</body>
