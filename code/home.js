@@ -2,11 +2,11 @@
 const date = new Date();
 
 // Festivity Update
-if(date.getMonth() == 11){
+if(date.getMonth() == 11 && date.getDay == 23){
     document.title = `🎄${document.title}🎄`
 } else if(date.getMonth() == 9) {
     document.title = `🎃${document.title}🎃`
-} else if(date.getMonth() == 11 && date.getDay() == 30){
+} else if(date.getMonth() == 11){
     document.title = `🎉${document.title}🎉`
 }
 
