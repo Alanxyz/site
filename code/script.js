@@ -1,3 +1,5 @@
+console.log('Te amo zJairo')
+
 // Define all
 const date = new Date();
 
