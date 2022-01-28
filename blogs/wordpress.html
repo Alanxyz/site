@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="ZSendokame Blog!" property="og:title">
+    <meta content="Enumeracion de usuarios en WordPress." property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>ZSendokame Blog</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <script src="../code/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Home</a>
+    </div>
+
+    <div class="title">
+        <h1>Enumeracion de usuarios en WordPress</h1>
+        <p>Python, web</p>
+    </div>
+
+    <div class="content">
+        <p>Hola gente, ahora estoy con un primo asi que sera corto este blog</p>
+        <p>Ayer estuve experimentando con un ataque llamado "User Enumeration" en paginas de WordPress (Aprovechando la ruta <code>WP-JSON</code>)</p>
+        <p>E hice este script para poder enumerar usuarios de una manera simple</p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/60cc0e33cadbb3c17715e19a212f700b.js"></script>
+        <br>
+        <p>Primero importa las librerias <code>sys</code> y <code>requests</code></p>
+        <p>Creamos una variable <code>userCount</code> que sume un usuario por cada revision</p>
+        <p>Y un bucle while, que al entrar a el suma 1 a la variable <code>userCount</code></p>
+        <p>Aprovechando eso hace una peticion HTTP por metodo GET al primer valor de una array mas una ruta en donde se almacenan los usuarios(<code>sys.argv</code>)</p>
+        <p>Asi se veria: <code>https://"sys.argv[1]"/wp-json/wp/v2/users/"userCount"</code></p>
+        <p>Obtenemos el valor del JSON y la ponemos en una variable</p>
+        <p>Ahora se revisa si dio un <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">status code</a> mayor a 400 (Errores del servidor o peticion en si)</p>
+        <p>Si es asi, solo lo pasamos para evitarlo</p>
+        <p>Con un else printeo el username en el JSON, ID, la URL del usuario y si es superadmin (Aun que normalmente da un status code de 401 El cual indica que la URL que intenta ser accedida esta protegida)</p>
+        <br>
+        <h1>Me despido!</h1>
+        <h2>Suerte!</h2>
+    </div>
+</body>
