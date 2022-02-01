@@ -31,15 +31,14 @@
         <br>
         <script src="https://gist.github.com/ZSendokame/60cc0e33cadbb3c17715e19a212f700b.js"></script>
         <br>
-        <p>Primero importa las librerias <code>sys</code> y <code>requests</code></p>
-        <p>Creamos una variable <code>userCount</code> que sume un usuario por cada revision</p>
-        <p>Y un bucle while, que al entrar a el suma 1 a la variable <code>userCount</code></p>
-        <p>Aprovechando eso hace una peticion HTTP por metodo GET al primer valor de una array mas una ruta en donde se almacenan los usuarios(<code>sys.argv</code>)</p>
-        <p>Asi se veria: <code>https://"sys.argv[1]"/wp-json/wp/v2/users/"userCount"</code></p>
-        <p>Obtenemos el valor del JSON y la ponemos en una variable</p>
-        <p>Ahora se revisa si dio un status code mayor a 400 (Errores del servidor o peticion en si)</p>
-        <p>Si es asi, solo lo pasamos para evitarlo</p>
-        <p>Con un else printeo el username en el JSON, ID, la URL del usuario y si es superadmin (Aun que normalmente da un status code de 401 El cual indica que la URL que intenta ser accedida esta protegida)</p>
+        <p>Primero importa las librerias <code>requests</code> que se puede instalar con <code>pip install requests</code> y <code>sys</code> que es Built-in</p>
+        <p>Revisamos si el usuario paso algun argumento usando la variable <code>argv</code> de <code>sys</code> que devuelve una lista con los parametros que el usuario paso</p>
+        <p>Si no paso algun argumento, lo informara y cerrara el programa</p>
+        <p>Despues de esto hacemos una peticion HTTP por metodo GET (Que obtendra la ruta <code>/wp-json/wp/v2/users</code>)</p>
+        <p>Y revisamos si dio un codigo de status 400 hacia arriba (Errores en la peticion o en el servidor)</p>
+        <p>Ahora obtenemos el JSON que devolvera la peticion en caso de un codigo de estado 200 (200 OK)</p>
+        <p>E imprimira el username, slug, id del usuario, la url entera y si es super admin (Aun que normalmente los usuarios con super admin estan protegidos)</p>
+        <p></p>
         <br>
         <h1>Me despido!</h1>
         <h2>Suerte!</h2>
