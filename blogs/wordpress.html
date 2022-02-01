@@ -25,7 +25,11 @@
     <div class="content">
         <p>Hola gente, ahora estoy con unos primos asi que sera corto este blog</p>
         <p>Ayer estuve experimentando con un ataque llamado "User Enumeration" en paginas de WordPress (Aprovechando la ruta <code>WP-JSON</code>)</p>
-        <p>E hice este script para poder enumerar usuarios de una manera simple</p>
+        <p>Pero primero, en que consiste la enumeracion de usuarios o User Enumeration?</p>
+        <br>
+        <h3>La enumeracion de usuarios consiste en obtener usuarios (normalmente en plataformas web) usando tecnicas como brute force para generar estos usuarios y probandolo contra sistemas de login, viendo el <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">status code</a> de respuesta de una url u otros.</h3>
+        <br>
+        <p>Ya sabiendo lo que es y como normalmente se hace, veamos como hice el script</p>
         <br>
         <script src="https://gist.github.com/ZSendokame/60cc0e33cadbb3c17715e19a212f700b.js"></script>
         <br>
@@ -35,7 +39,7 @@
         <p>Aprovechando eso hace una peticion HTTP por metodo GET al primer valor de una array mas una ruta en donde se almacenan los usuarios(<code>sys.argv</code>)</p>
         <p>Asi se veria: <code>https://"sys.argv[1]"/wp-json/wp/v2/users/"userCount"</code></p>
         <p>Obtenemos el valor del JSON y la ponemos en una variable</p>
-        <p>Ahora se revisa si dio un <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">status code</a> mayor a 400 (Errores del servidor o peticion en si)</p>
+        <p>Ahora se revisa si dio un status code mayor a 400 (Errores del servidor o peticion en si)</p>
         <p>Si es asi, solo lo pasamos para evitarlo</p>
         <p>Con un else printeo el username en el JSON, ID, la URL del usuario y si es superadmin (Aun que normalmente da un status code de 401 El cual indica que la URL que intenta ser accedida esta protegida)</p>
         <br>
