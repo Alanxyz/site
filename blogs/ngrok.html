@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="Blog de Sendokame." property="og:title">
+    <meta content="GitHub, mala seguridad y tokens." property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>GitHub, mala seguridad y tokens.</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <script src="../code/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Pagina principal.</a>
+    </div>
+
+    <div class="title">
+        <h1>GitHub, mala seguridad y tokens.</h1>
+        <p>Python, tokens, github</p>
+    </div>
+
+    <div class="content">
+        <p>Hola, hoy les voy a hablar sobre su seguridad... mas bien de sus secretos.</p>
+        <p>Los que mas aprecian, esconden y protegen! y que muchas veces, estan a la vista de todos</p>
+        <p>Hoy les enseñare que deben revisar sus archivos en busca de tokens y porque no deberian publicarlos</p>
+        <p>Hace unas horas con Rep, de Hack4U (Servidor de discord de S4vitar) estuvimos hablando de NGROK, una cosa llevo a la otra y</p>
+        <p>Terminamos hablando de tokens de NGROK (Aun que lo que dire aplica para todos los tipos de tokens privados)</p>
+        <p>Decia que podiamos encontrar miles en <a href="https://github.com">GitHub</a> y para demostrarlo, me hice un script</p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/d8e04650379dfbadeed12b85ac65f685.js"></script>
+        <br>
+        <p>Basicamente se usan tres librerias <code>time</code>, <code>re</code> y <code>requests</code></p>
+        <p><code>time</code> sirve para cosas relacionadas al tiempo, lo uso para esperar X segundos antes de algo</p>
+        <p><code>re</code> permite usar Regex (Regex es un lenguaje que permite escribir patrones de busqueda), lo use para poder encontrar los tokens</p>
+        <p>Y finalmente <code>requests</code>, lo use para poder interactuar con la API de GitHub</p>
+        <p>Defini <code>url</code> que contenia la URL de la API</p>
+        <p>Y hago un bucle del 1 al 1000 (GitHub te deja buscar de la primera a la pagina numero 1000 usando su API)</p>
+        <p>Defino <code>total</code> a 0 para usarlo como contador de la cantidad de tokens que se encontraron</p>
+        <p>Aqui defino <code>response</code>, que es la peticion HTTP (GET) que hago a la API</p>
+        <p>por cada iteracion cambia la pagina</p>
+        <p>Reviso si el JSON que devolvio <code>response</code> contiene la key <code>items</code></p>
+        <p>Basicamente si devolvio repositorios o no</p>
+        <p>Aca itero por cada post, defino <code>match</code> a una busqueda usando Regex en la descripcion de cada repositorio.</p>
+        <p>El regex es este <code>\d+\w{20,26}_\w+</code></p>
+        <p>Basicamente revisa por un Digito (O mas) al lado de un string con numeros y letras que dura de 20 a 26 caracteres</p>
+        <p>Eso encuentra un Token de NGROK exactamente (Siempre habran errores, pero con la busqueda que hice no paso)</p>
+        <p>Si el numero de matches es mayor a 0 sumo 1 al total de tokens encontrado</p>
+        <p>Abro un archivo llamado <code>dump.txt</code> y guardo el token en ese archivo</p>
+        <p>Muestro cuantos tokens se obtuvieron en la pagina y espero otros 60 segundos para repetir</p>
+        <p>Y finalmente, termine con este <a href="https://pastebin.com/SEf2pGvE">dump</a> (Junte algunos que encontre anteriormente en GitHub)</p>
+        <p>Si uno de tus tokens de NGROK esta ahi, ya sabes. Leakeaste tu Token</p>
+        <p>Si no, no seas malo y no saques nada de ahi, recuerda que NGROK loguea todo, asi que si el admin ve su pagina de admin y ve tu servidor (Junto a todas las IPs)</p>
+        <p>Estaras jodido y lo mas probable no es que solo tenga IPs de tus amigos o desconocidos</p>
+        <p>Seguramente tu tambien entraste a esa pagina, asi que tambien tendra la tuya</p>
+        <p>Aun si las IPs no son muy utiles, hay varias webs donde las puedes denunciar</p>
+        <p>Ya sabes, ten cuidado con tus tokens.</p>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h2>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Subir.</button>
+</body>
+</html>
