@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="Blog de Sendokame." property="og:title">
+    <meta content="Que es la Deep Web?" property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>Que es la Deep Web?</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <script src="../code/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Pagina principal.</a>
+    </div>
+
+    <div class="title">
+        <h1>Que es la Deep Web?</h1>
+        <p>Internet</p>
+    </div>
+
+    <div class="content">
+        <p>La Deep Web es conocida por ser ese lugar escondido, oculto de la mirada ajena y la casa de gran parte de los delincuentes</p>
+        <p>esto... claramente es una mentira del tamaño de una casa</p>
+        <br>
+        <h3>La Deep Web no es nada mas que un monton de URLs imposibles de buscar</h3> 
+        <h3>Estas URLs no indexadas pueden ser desde videos de YouTube privados hasta Carpetas privadas de Mega, Drive u otros</h3>
+        <br>
+        <p>En estos casos podemos hacer que nuestra pagina no sea indexable de diferentes formas</p>
+        <p>Ya sea usando Meta tags <code>&#60;meta name="robots" content="noindex"&#62;</code></p>
+        <p>O deshabilitandolo desde <a href="https://google.com/robots.txt">Robots.txt</a> (El cual es un archivo que sirve a los robots para saber que indexar y que no)</p>
+        <p>pero... Antes de seguir con los diferentes metodos para hacer una pagina no indexable necesitamos saber lo que es un User-Agent</p>
+        <br>
+        <h3>Un User-Agent es un String que nos da informacion del browser, sistema operativo y demas de un usuario.</h3>
+        <br>
+        <p>En <a href="https://google.com/robots.txt">Robots.txt</a> podemos especificar el User-Agent que queremos afectar</p>
+        <p>Se haria en la primera linea</p>
+        <code>User-agent: </code>
+        <p>Y se pondria el User-agent (En caso de querer afectar a todos los User-Agents tendremos que poner un * )</p>
+        <br><br>
+        <p>Y ya conociendo los metodos mas comunes para hacer una pagina No indexable les hablare de Tor y el <code>.onion</code></p>
+        <br>
+        <p>Tor es un proyecto enfocado a mantener los datos de los usuarios protegidos de los gobiernos, ISPs y redes publicas</p>
+        <p>Usa un sistema llamado <code>Onion Routing</code></p>
+        <p>en resumen</p>
+        <br>
+        <h3>El Onion Routing se basa en obtener una peticion de un usuario, pasarla de un computador a otro y asi varias veces hasta que por fin llegamos a la pagina web que se solicite.</h3>
+        <br>
+        <p>cabe aclarar que toda la informacion esta completamente encriptada (excepto los nodos de entrada y salida)</p>
+        <p>Asi es como podemos cambiar una IP varias veces hasta llegar a una web (lo cual hace que las paginas web se ralenticen)</p>
+        <p>esto conduce a varios problemas, como podria ser que un nodo modifique tus peticiones e injecte codigo malicioso para obtener datos</p>
+        <h5>(de esto habla mas a fondo Chema Alonso en una conferencia llamada <a href="https://youtu.be/C3zzwc72KHw">"Owning bad guys and mafia with JavaScript botnets"</a>)</h5>
+        <p>Pero no hablamos de eso</p>
+        <p>Una de las formas mas complicadas de hacer tu pagina no indexable es prenderla en la "deep web"</p>
+        <p>cuando hablo de la deep web hablo de las tipicas paginas .onion</p>
+        <p>El cual es una extension usada por Tor para que no sean indexadas por otros buscadores como Google</p>
+        <p>estas paginas con extension .onion solo pueden ser accedidas desde Tor</p>
+        <br>
+        <p>ya sabiendo lo que es la deep web y como añadir a tu pagina a la familia de la deep web dare un resumen de lo que he mostrado</p>
+        <br>
+        <h3>La deep web es un monton de URLs no indexadas (Ya sea que usen meta-tags o yendo a la misma deep web para no ser detectadas) gran parte de contenido de esta parte del internet efectivamente es turbio</h3>
+        <h3>Pero nada que no puedas encontrar en la Clearnet</h3>
+        <h4>sin ir mas lejos eBay vende huesos humanos y es completamente indexable</h4>
+        <br>
+        <p>Gran parte de frases en donde se dice que la deep web es peligrosa son mentiras</p>
+        <p>es bastante amigable de hecho</p>
+        <p>Normalmente se encuentran paginas sobre pirateria o simplemente para hablar (Hay muchos gobiernos realmente controladores sobre la vida de los usuarios)</p>
+        <p>si entras es imposible que te hackeen de la nada</p>
+        <p>eso no quita que no te debas cuidar (No aceptes permisos para saber tu ubicacion, prender la camara o microfono y mucho menos descargues archivos)</p>
+        <p>ya sabiendo eso tambien aclarare que no hay mejor sistema operativo para entrar</p>
+        <p>hay virus en todos los sistemas operativos (Windows, GNU/Linux y MacOS) algunos tienen mas que otros</p>
+        <p>tambien hay que aclarar que no es necesario usar VPN o Proxy para entrar, solo Tor en caso de .onion</p>
+        <br>
+        <p>Bueno, este blog es bastante largo y no lo seguire alargando</p>
+        <p>entiendo que sea un poco complicado (Intente resumirlo y simplificarlo sin saltarme partes importantes) si tienes dudas puedes hablarme a Discord</p>
+        <h4><a href="https://discord.com/invite/aBsCR6pyZj">World Hacking</a></h4>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h3>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Subir.</button>
+</body>
+</html>

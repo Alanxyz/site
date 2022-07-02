@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="Blog de Sendokame." property="og:title">
+    <meta content="Enumeracion de usuarios en WordPress." property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>Enumeracion de usuarios en WordPress.</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <script src="../code/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Pagina principal.</a>
+    </div>
+
+    <div class="title">
+        <h1>Enumeracion de usuarios en WordPress.</h1>
+        <p>Python, web</p>
+    </div>
+
+    <div class="content">
+        <p>Hola gente, ahora estoy con unos primos asi que sera corto este blog</p>
+        <p>Ayer estuve experimentando con un ataque llamado "User Enumeration" en paginas de WordPress (Aprovechando la ruta <code>WP-JSON</code>)</p>
+        <p>Pero primero, en que consiste la enumeracion de usuarios o User Enumeration?</p>
+        <h3>La enumeracion de usuarios consiste en obtener usuarios (normalmente en plataformas web) usando tecnicas como brute force para generar estos usuarios y probandolos contra sistemas de login, viendo el <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">status code</a> de respuesta de una url u otros.</h3>
+        <p>Ya sabiendo lo que es y como normalmente se hace, veamos como hice el script</p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/04a95471a65832c34186d004b2aee2a6.js"></script>
+        <br>
+        <p>Primero importa las librerias <code>requests</code> que se puede instalar con <code>pip install requests</code> y <code>sys</code> que es Built-in</p>
+        <p>Revisamos si el usuario paso algun argumento usando la variable <code>argv</code> de <code>sys</code> que devuelve una lista con los parametros que el usuario paso</p>
+        <p>Si no paso algun argumento, lo informara y cerrara el programa</p>
+        <p>Despues de esto hacemos una peticion HTTP por metodo GET (Que obtendra la ruta <code>/wp-json/wp/v2/users</code>)</p>
+        <p>Y revisamos si dio un codigo de status 400 hacia arriba (Errores en la peticion o en el servidor)</p>
+        <p>Ahora obtenemos el JSON que devolvera la peticion en caso de un codigo de estado 200 (200 OK)</p>
+        <p>Y usando el mismo JSON que devuelve, es parseado por detras y devuelto en forma de diccionario</p>
+        <p>Por lo que ahora se pueden obtener los datos usando los square brackets para indexar los elementos
+        <br>
+        <h1>Me despido!</h1>
+        <h2>Suerte!</h2>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Subir.</button>
+</body>
+</html>

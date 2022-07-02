@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="Blog de Sendokame." property="og:title">
+    <meta content="Web Scraping!" property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>Web Scraping!</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <script src="../code/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Pagina principal.</a>
+    </div>
+
+    <div class="title">
+        <h1>Web Scraping!</h1>
+        <p>Python, HTTP</p>
+    </div>
+
+    <div class="content">
+        <h2>Hola gente</h2>
+        <p>Hoy estare hablando sobre Web Scraping en Python</p>
+        <p>Pero primero... Que es el Web Scraping?</p>
+        <br>
+        <h3>El web scraping es una tecnica utilizada para obtener datos de una pagina web desde (normalmente) la terminal</h3>
+        <h3>Muchos buscadores utilizan esta tecnica</h3>
+        <br>
+        <p>Ahora que sabemos lo que es el Web Scraping podemos seguir</p>
+        <p>Para poder hacer este Script necesitaremos las librerias <code>requests</code>, <code>bs4</code> y <code>lxml</code></p>
+        <p>Estas librerias se pueden instalar con el comando <code>pip install requests, bs4, lxml</code></p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/fc9ac95d8288f007901d5cd8393f3695.js"></script>
+        <br>
+        <p>Primero importamos las librerias <code>requests</code> y <code>bs4</code></p>
+        <p>Creamos una funcion</p>
+        <p>Esta recibe el parametro <code>host</code> en el cual se definira la pagina web que vamos a escrapear</p>
+        <p>Ahora definimos la variable <code>get</code> el cual hara un <code>GET</code> a la pagina web</p>
+        <p>Tambien le daremos un parametro <code>allow_redirects</code> y lo definimos a <code>False</code></p>
+        <p>Asi evitaremos que la pagina nos redirija</p>
+        <p>Para poder parsear la pagina usamos la clase <code>BeautifulSoup</code></p>
+        <p>Le pasamos el contenido de la pagina (<code>get.content</code>) y lo parseamos con <code>lxml</code></p>
+        <p>Para poder encontrar todas las etiquetas <code>p</code> se usara la funcion <code>soup.find_all('p')</code></p>
+        <p>Asi que</p>
+        <p>Al hacer un bucle <code>for</code> sobrela lista que genero <code>p</code></p>
+        <p>Y desde ahi imprimimos la variable <code>paragraph</code></p>
+        <p>antes de terminar Debo aclarar que puedes usar varias funciones como <code>has_attrs</code> en donde puedes especificar los atributos que necesita la etiqueta</p>
+        <p>Tambien se usa <code>class_</code> e <code>id</code></p>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h2>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Subir.</button>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="Blog de Sendokame." property="og:title">
+    <meta content="Obteniendo datos de servidores!" property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>Obteniendo datos de servidores!</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <script src="../code/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../home.html">Pagina principal.</a>
+    </div>
+
+    <div class="title">
+        <h1>Obteniendo datos de servidores!</h1>
+        <p>Python, HTTP, Hacking</p>
+    </div>
+
+    <div class="content">
+        <h3>En este blog aprenderemos a obtener informacion sensible de servidores con una peticion</h3>
+
+        <p>Pero primero... Que es una peticion HTTP?</p>
+        <p>Una peticion HTTP es una conexion que hace una maquina a una pagina web</p>
+        <code>Usuario <-> Servidor</code>
+        <p>Ya sea para obtener, mandar, modificar o crear datos</p>
+        <p>Al hacer una peticion el servidor te respondera</p>
+        <p>Ya sea con el contenido de un archivo u otros datos</p>
+        <p>Se les llaman metodos y son los siguientes</p>
+
+        <h4>GET: Obtener</h4>
+        <h4>POST: Enviar datos</h4>
+        <h4>PUT: Crear o modificar un recurso</h4>
+        <h4>DELETE: Elimina</h4>
+
+        <p>Ahora que conocemos los diferentes metodos podemos hacer lo siguiente</p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/f87ff464677249e1e821598705be1ed1.js"></script>
+        <br>
+        <p>Que hace el script?</p>
+        <p>El script importa la libreria requests (Tienes que instalarla con pip <code>pip install requests</code>)</p>
+        <p>Con la libreria hacemos una peticion GET a una pagina web</p>
+        <p>Creamos una variable la cual almacena esta peticion <code>do_get</code></p>
+        <p>Imprimimos el status de la pagina con <code>do_get.status_code</code></p>
+        <p>La variable <code>do_get</code> Nos permite acceder a un diccionario llamado <code>headers</code> el cual almacena todos los valores y llaves de los headers con los que nos responda el servidor</p>
+        <p>Ahora, usamos el diccionario y buscamos una llave usando la funcion <code>.get('Llave')</code></p>
+        <p>Cabe aclarar que esta funcion solo es para diccionarios</p>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h2>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Subir.</button>
+</body>
+</html>

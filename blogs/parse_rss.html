@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="Blog de Sendokame." property="og:title">
+    <meta content="Parseando RSS!" property="og:description">
+    <meta name=theme-color content="#c0ff00">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ZSendokame">
+    <meta name="keywords" content="Hacking, Tecnologia">
+
+    <title>Parseando RSS!</title>
+    <link rel="stylesheet" href="../style/blog.css">
+    <script src="../code/script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="../home.html">Pagina principal.</a>
+    </div>
+
+    <div class="title">
+        <h1>Parseando RSS!</h1>
+        <p>Python, Feed</p>
+    </div>
+
+    <div class="content">
+        <h3>En este blog aprenderemos a parsear RSS</h3>
+
+        <p>Pero primero... Que es RSS?</p>
+        <p>Es un formato de XML para compartir contenido en paginas web</p>
+        <p>Generalmente se usa para compartir contenido a los usuarios que se suscriben</p>
+        <p>Normalmente este archivo muestra el titulo de las publicaciones, descripcion y mas informacion</p>
+        <p>Hoy nos vamos a centrar en obtener los titulos y la URL de todos los posts en una web</p>
+        <p>Para poder hacerlo necesitaremos una libreria llamada feedparser</p>
+        <p>Las puedes instalar con <code>pip install feedparser</code></p>
+        <p>Empecemos!</p>
+        <br>
+        <script src="https://gist.github.com/ZSendokame/350bd0b8de40fbd45b3f40ea96ca36e1.js"></script>
+        <br>
+        <p>Primero importamos la libreria feedparser</p>
+        <p>Lo segundo es crear una variable</p>
+        <p>La llamaremos <code>link</code> y sera el encargado de preguntarnos la URL del archivo XML</p>
+        <p>Despues crearemos una variable llamada <code>feed</code> la cual va a parsear nuestro documento</p>
+        <p>De ahi crearemos una variable <code>feed_title</code> la cual usara a la anterior variable para buscar el titulo</p>
+        <p>Ahora creamos una variable llamada <code>feed_entries</code> la cual va a obtener todas las entradas en el archivo</p>
+        <p>Para poder imprimirlas todas haremos un bucle for que recorra la lista de entradas</p>
+        <p>Usando el valor <code>.title</code> y <code>.link</code> obtendremos el titulo y el link</p>
+        <br>
+        <h1>Me despido</h1>
+        <h2>Suerte!</h2>
+    </div>
+
+    <button onclick="up()" class="upbutton" id="upbutton">Subir.</button>
+</body>
+</html>
