@@ -58,10 +58,9 @@ body {
 }
 
 .blogs {
-    position: absolute;
-    left: 100px;
+    max-width: 600px;
+    margin: 30px auto;
     font-family: 'Fira Code';
-    white-space: pre-wrap;
 }
 
 .blogs a {
